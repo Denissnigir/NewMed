@@ -20,14 +20,14 @@ namespace NewMed.Windows
     /// </summary>
     public partial class AuthHistory : Window
     {
-        List<User> userLoginList = new List<User>();
-        List<NewMed.Model.AuthHistory> authHistories = new List<Model.AuthHistory>();
-        List<string> sortDateList = new List<string>()
+        List<User> userLoginList = new List<User>(); // Юзеры
+        List<NewMed.Model.AuthHistory> authHistories = new List<Model.AuthHistory>(); // История авторизации
+        List<string> sortDateList = new List<string>() 
         {
             "Сортировка по дате",
             "Сортировать в порядке возрастания",
             "Соритровать в порядке убывания"
-        };
+        }; // Лист для сортировки
 
         public AuthHistory()
         {
@@ -46,7 +46,7 @@ namespace NewMed.Windows
             Filter();
         }
        
-        public void Filter()
+        public void Filter() // Фильтрация и сортировка
         {
             authHistories = Context._context.AuthHistory.ToList();
 

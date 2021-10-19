@@ -23,24 +23,22 @@ namespace NewMed
     /// </summary>
     public partial class MainWindow : Window
     {
-        const int maxTimerCount = 60;
+        DispatcherTimer _dispTimer; // Таймер
+        TimeSpan _dispTimerCounter; // Счётчик таймера 
 
-        DispatcherTimer _dispTimer;
-        TimeSpan _dispTimerCounter;
+        DateTime curDate = DateTime.Now; // Текущая дата
+        
+        List<Model.AuthHistory> authHistories = new List<Model.AuthHistory>(); // ???
 
-        DateTime curDate = DateTime.Now;
+        List<Model.User> users = new List<Model.User>(); // Лист юзеров
 
-        List<Model.AuthHistory> authHistories = new List<Model.AuthHistory>();
-
-        List<Model.User> users = new List<Model.User>();
-
-        public static bool isFirst = true;
+        public static bool isFirst = true; // Первый ли раз что-то там
 
         public MainWindow()
         {
             InitializeComponent();
 
-            if (CaptchaWin.isCaptcha == true && isFirst == false)
+            if (CaptchaWin.isCaptcha == true && isFirst == false) // Бесполезная штука, всё равно во время капчи вырубаем окно)
             {
                 EnterButton.IsEnabled = false;
             }
@@ -49,10 +47,10 @@ namespace NewMed
                 EnterButton.IsEnabled = true;
             }
 
-            PasswordTB.Visibility = Visibility.Hidden;
+            PasswordTB.Visibility = Visibility.Hidden; // Костыль с ПБ и ТБ
             PasswordPB.Visibility = Visibility.Visible;
 
-            if (LabMainMenu.isLocked == true)
+            if (LabMainMenu.isLocked == true) // Таймер, запрет входа на минуту
             {
                 _dispTimerCounter = new TimeSpan(0, 1, 0);
                 _dispTimer = new DispatcherTimer();
@@ -61,12 +59,12 @@ namespace NewMed
                 _dispTimer.Start();
             }
 
-            authHistories = Context._context.AuthHistory.ToList();
-            users = Context._context.User.ToList();
-           
+            authHistories = Context._context.AuthHistory.ToList(); // Инициализация контекста AuthHistory
+            users = Context._context.User.ToList(); // Инициализация контекста User
+
         }
 
-        private void TimerTick(object sender, EventArgs e)
+        private void TimerTick(object sender, EventArgs e) // Непосредственно сам таймер
         {
             _dispTimerCounter = _dispTimerCounter - new TimeSpan(0, 0, 1);
             TimerTB.Text = _dispTimerCounter.ToString();
@@ -80,12 +78,12 @@ namespace NewMed
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) // Кнопка выключения 
         {
             Application.Current.Shutdown();
         }
 
-        private void ShowPassword_Click(object sender, RoutedEventArgs e)
+        private void ShowPassword_Click(object sender, RoutedEventArgs e) // Замена ТБ и ПБ
         {
             if (ShowPassword.IsChecked == true)
             {
@@ -101,7 +99,7 @@ namespace NewMed
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e) // Авторизация
         {
             try
             {
