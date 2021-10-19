@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище MedicalDBModelContainer" CdmEntityContainer="MedicalDBEntities">
+    <EntitySetMapping Name="Analyzer">
+      <EntityTypeMapping TypeName="MedicalDBModel.Analyzer">
+        <MappingFragment StoreEntitySet="Analyzer">
+          <ScalarProperty Name="AnalyzerId" ColumnName="AnalyzerId" />
+          <ScalarProperty Name="AnalyzerName" ColumnName="AnalyzerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthHistory">
+      <EntityTypeMapping TypeName="MedicalDBModel.AuthHistory">
+        <MappingFragment StoreEntitySet="AuthHistory">
+          <ScalarProperty Name="AuthHistoryId" ColumnName="AuthHistoryId" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="AuthTime" ColumnName="AuthTime" />
+          <ScalarProperty Name="AuthDate" ColumnName="AuthDate" />
+          <ScalarProperty Name="IsSuccessfull" ColumnName="IsSuccessfull" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blood">
+      <EntityTypeMapping TypeName="MedicalDBModel.Blood">
+        <MappingFragment StoreEntitySet="Blood">
+          <ScalarProperty Name="BloodId" ColumnName="BloodId" />
+          <ScalarProperty Name="BloodPatient" ColumnName="BloodPatient" />
+          <ScalarProperty Name="BloodBarcode" ColumnName="BloodBarcode" />
+          <ScalarProperty Name="BloodDate" ColumnName="BloodDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodService">
+      <EntityTypeMapping TypeName="MedicalDBModel.BloodService">
+        <MappingFragment StoreEntitySet="BloodService">
+          <ScalarProperty Name="BloodServiceId" ColumnName="BloodServiceId" />
+          <ScalarProperty Name="BloodId" ColumnName="BloodId" />
+          <ScalarProperty Name="BloodUserServiceId" ColumnName="BloodUserServiceId" />
+          <ScalarProperty Name="BloodServiceResult" ColumnName="BloodServiceResult" />
+          <ScalarProperty Name="BloodServiceFinished" ColumnName="BloodServiceFinished" />
+          <ScalarProperty Name="BloodServiceAccepted" ColumnName="BloodServiceAccepted" />
+          <ScalarProperty Name="BoolServiceStatus" ColumnName="BoolServiceStatus" />
+          <ScalarProperty Name="BoolServiceAnalyzer" ColumnName="BoolServiceAnalyzer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="MedicalDBModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Insurance">
+      <EntityTypeMapping TypeName="MedicalDBModel.Insurance">
+        <MappingFragment StoreEntitySet="Insurance">
+          <ScalarProperty Name="InsuranceId" ColumnName="InsuranceId" />
+          <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+          <ScalarProperty Name="IsuranceAddress" ColumnName="IsuranceAddress" />
+          <ScalarProperty Name="IsuranceInn" ColumnName="IsuranceInn" />
+          <ScalarProperty Name="InsuranceIp" ColumnName="InsuranceIp" />
+          <ScalarProperty Name="InsurancePc" ColumnName="InsurancePc" />
+          <ScalarProperty Name="InsuranceBik" ColumnName="InsuranceBik" />
+          <ScalarProperty Name="InsuranceUserAuth" ColumnName="InsuranceUserAuth" />
+          <ScalarProperty Name="InsuranceCountry" ColumnName="InsuranceCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="MedicalDBModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderCreateDate" ColumnName="OrderCreateDate" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderService">
+      <EntityTypeMapping TypeName="MedicalDBModel.OrderService">
+        <MappingFragment StoreEntitySet="OrderService">
+          <ScalarProperty Name="OrderServiceId" ColumnName="OrderServiceId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatus">
+      <EntityTypeMapping TypeName="MedicalDBModel.OrderStatus">
+        <MappingFragment StoreEntitySet="OrderStatus">
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patient">
+      <EntityTypeMapping TypeName="MedicalDBModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="ParientId" ColumnName="ParientId" />
+          <ScalarProperty Name="PatientFullName" ColumnName="PatientFullName" />
+          <ScalarProperty Name="PatientLogin" ColumnName="PatientLogin" />
+          <ScalarProperty Name="PatientPassword" ColumnName="PatientPassword" />
+          <ScalarProperty Name="PatientGuid" ColumnName="PatientGuid" />
+          <ScalarProperty Name="PatientEmail" ColumnName="PatientEmail" />
+          <ScalarProperty Name="PatientSocialSecNumber" ColumnName="PatientSocialSecNumber" />
+          <ScalarProperty Name="PatientEin" ColumnName="PatientEin" />
+          <ScalarProperty Name="PatientSocialType" ColumnName="PatientSocialType" />
+          <ScalarProperty Name="PatientPhone" ColumnName="PatientPhone" />
+          <ScalarProperty Name="PatientPassportSerial" ColumnName="PatientPassportSerial" />
+          <ScalarProperty Name="PatientPassportNumber" ColumnName="PatientPassportNumber" />
+          <ScalarProperty Name="PatientBirthdate" ColumnName="PatientBirthdate" />
+          <ScalarProperty Name="PatientInsurance" ColumnName="PatientInsurance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service">
+      <EntityTypeMapping TypeName="MedicalDBModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+          <ScalarProperty Name="ServiceDuration" ColumnName="ServiceDuration" />
+          <ScalarProperty Name="ServiceAverageDeviation" ColumnName="ServiceAverageDeviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialType">
+      <EntityTypeMapping TypeName="MedicalDBModel.SocialType">
+        <MappingFragment StoreEntitySet="SocialType">
+          <ScalarProperty Name="SocialTypeId" ColumnName="SocialTypeId" />
+          <ScalarProperty Name="SocialTypeName" ColumnName="SocialTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MedicalDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="MedicalDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="UserLastenter" ColumnName="UserLastenter" />
+          <ScalarProperty Name="UserRoleName" ColumnName="UserRoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="MedicalDBModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="UserRoleName" ColumnName="UserRoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserService">
+      <EntityTypeMapping TypeName="MedicalDBModel.UserService">
+        <MappingFragment StoreEntitySet="UserService">
+          <ScalarProperty Name="UserServiceId" ColumnName="UserServiceId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

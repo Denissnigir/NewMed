@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D3991C6-19FD-4B45-B24D-733F635657E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewMed</RootNamespace>
+    <AssemblyName>NewMed</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Model\Analyzer.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AuthHistory.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Blood.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BloodService.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CaptchaWin.xaml.cs">
+      <DependentUpon>CaptchaWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Context.cs" />
+    <Compile Include="Model\Country.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Insurance.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MedicalDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MedicalDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MedicalDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Order.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OrderService.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OrderStatus.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PartClass.cs" />
+    <Compile Include="Model\Patient.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Service.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SocialType.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserRole.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserService.cs">
+      <DependentUpon>MedicalDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AuthHistory.xaml.cs">
+      <DependentUpon>AuthHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LabAdmMaimMenu.xaml.cs">
+      <DependentUpon>LabAdmMaimMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LabIsslMainMenu.xaml.cs">
+      <DependentUpon>LabIsslMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LabMainMenu.xaml.cs">
+      <DependentUpon>LabMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ManagerMainMenu.xaml.cs">
+      <DependentUpon>ManagerMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Model\CaptchaWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AuthHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LabAdmMaimMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LabIsslMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LabMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ManagerMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\MedicalDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MedicalDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\MedicalDB.edmx.diagram">
+      <DependentUpon>MedicalDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Resources\loader.gif" />
+    <Resource Include="Windows\Resources\logo.ico" />
+    <Resource Include="Windows\Resources\logo.png" />
+    <Resource Include="Windows\Resources\laborant_1.jpeg" />
+    <Resource Include="Windows\Resources\laborant_2.png" />
+    <Resource Include="Windows\Resources\Администратор.png" />
+    <Resource Include="Windows\Resources\Бухгалтер.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Model\logo.ico" />
+    <Content Include="Model\MedicalDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedicalDB.edmx</DependentUpon>
+      <LastGenOutput>MedicalDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\MedicalDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedicalDB.edmx</DependentUpon>
+      <LastGenOutput>MedicalDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

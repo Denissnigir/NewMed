@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c0078d6a5a8e470f89f1239881c99034" Name="Diagram1">
+        <EntityTypeShape EntityType="MedicalDBModel.Analyzer" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.AuthHistory" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Blood" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.BloodService" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Country" Width="1.5" PointX="1.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Insurance" Width="1.5" PointX="1.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Order" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.OrderService" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.OrderStatus" Width="1.5" PointX="1.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Patient" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.Service" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.SocialType" Width="1.5" PointX="1.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.User" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.UserRole" Width="1.5" PointX="1.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicalDBModel.UserService" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="MedicalDBModel.FK_BloodService_Analyzer" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_AuthHistory_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_Blood_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_BloodService_Blood" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_BloodService_UserService" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_Insurance_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_Patient_Insurance1" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_OrderService_Order1" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_OrderService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_Patient_SocialType" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_UserService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_User_UserRole" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicalDBModel.FK_UserService_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
